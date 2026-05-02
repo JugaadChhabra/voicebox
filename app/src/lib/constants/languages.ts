@@ -11,6 +11,8 @@
 /** All languages that any engine supports. */
 export const ALL_LANGUAGES = {
   ar: 'Arabic',
+  as: 'Assamese',
+  bn: 'Bengali',
   da: 'Danish',
   de: 'German',
   el: 'Greek',
@@ -18,19 +20,27 @@ export const ALL_LANGUAGES = {
   es: 'Spanish',
   fi: 'Finnish',
   fr: 'French',
+  gu: 'Gujarati',
   he: 'Hebrew',
   hi: 'Hindi',
   it: 'Italian',
   ja: 'Japanese',
+  kn: 'Kannada',
   ko: 'Korean',
+  ml: 'Malayalam',
+  mr: 'Marathi',
   ms: 'Malay',
   nl: 'Dutch',
   no: 'Norwegian',
+  or: 'Odia',
+  pa: 'Punjabi',
   pl: 'Polish',
   pt: 'Portuguese',
   ru: 'Russian',
   sv: 'Swedish',
   sw: 'Swahili',
+  ta: 'Tamil',
+  te: 'Telugu',
   tr: 'Turkish',
   zh: 'Chinese',
 } as const;
@@ -70,6 +80,7 @@ export const ENGINE_LANGUAGES: Record<string, readonly LanguageCode[]> = {
   tada: ['en', 'ar', 'zh', 'de', 'es', 'fr', 'it', 'ja', 'pl', 'pt'],
   kokoro: ['en', 'es', 'fr', 'hi', 'it', 'pt', 'ja', 'zh'],
   qwen_custom_voice: ['zh', 'en', 'ja', 'ko', 'de', 'fr', 'ru', 'pt', 'es', 'it'],
+  indicf5: ['as', 'bn', 'gu', 'hi', 'kn', 'ml', 'mr', 'or', 'pa', 'ta', 'te'],
 } as const;
 
 /** Helper: get language options for a given engine. */

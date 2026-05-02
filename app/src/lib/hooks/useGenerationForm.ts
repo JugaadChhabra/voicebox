@@ -27,6 +27,7 @@ const generationSchema = z.object({
       'chatterbox_turbo',
       'tada',
       'kokoro',
+      'indicf5',
     ])
     .optional(),
   personality: z.boolean().optional(),

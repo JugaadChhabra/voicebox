@@ -70,6 +70,7 @@ const DEFAULT_ENGINE_OPTIONS = [
   { value: 'chatterbox_turbo', label: 'Chatterbox Turbo' },
   { value: 'tada', label: 'TADA' },
   { value: 'kokoro', label: 'Kokoro 82M' },
+  { value: 'indicf5', label: 'IndicF5 (Indic)' },
 ] as const;
 
 function makeProfileSchema(t: (key: string) => string) {

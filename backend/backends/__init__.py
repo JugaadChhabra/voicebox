@@ -215,6 +215,7 @@ TTS_ENGINES = {
     "chatterbox_turbo": "Chatterbox Turbo",
     "tada": "TADA",
     "kokoro": "Kokoro",
+    "indicf5": "IndicF5",
 }
 
 LLM_ENGINES = {
@@ -363,6 +364,14 @@ def _get_non_qwen_tts_configs() -> list[ModelConfig]:
             hf_repo_id="hexgrad/Kokoro-82M",
             size_mb=350,
             languages=["en", "es", "fr", "hi", "it", "pt", "ja", "zh"],
+        ),
+        ModelConfig(
+            model_name="indicf5",
+            display_name="IndicF5 (Indic Languages)",
+            engine="indicf5",
+            hf_repo_id="ai4bharat/IndicF5",
+            size_mb=1200,
+            languages=["as", "bn", "gu", "hi", "kn", "ml", "mr", "or", "pa", "ta", "te"],
         ),
     ]
 
@@ -704,6 +713,10 @@ def get_tts_backend_for_engine(engine: str) -> TTSBackend:
             from .kokoro_backend import KokoroTTSBackend
 
             backend = KokoroTTSBackend()
+        elif engine == "indicf5":
+            from .indicf5_backend import IndicF5TTSBackend
+
+            backend = IndicF5TTSBackend()
         elif engine == "qwen_custom_voice":
             from .qwen_custom_voice_backend import QwenCustomVoiceBackend
 
